@@ -1,1 +1,26 @@
-This is my first GitHub website. Woot woot.
+# Retro Repasts — GitHub Pages site
+
+This repository hosts the Retro Repasts site via GitHub Pages and is configured for the custom domain `retrorepasts.com` (also supporting `www.retrorepasts.com`).
+
+DNS configuration you should add at your domain registrar (for both apex and www to work):
+
+- Apex (retrorepasts.com): add these A records for host `@`:
+  - 185.199.108.153
+  - 185.199.109.153
+  - 185.199.110.153
+  - 185.199.111.153
+
+- www (www.retrorepasts.com): add a CNAME record:
+  - host: `www` 14 value: `Daisymoo.github.io`
+
+After adding DNS records:
+- Wait for DNS propagation (minutes > a few hours depending on DNS).
+- In the repository Settings > Pages: confirm the source is the `main` branch (root). GitHub will detect the CNAME and provision an HTTPS certificate for your domain. When the certificate is ready, enable "Enforce HTTPS".
+
+Notes:
+- The CNAME file contains `retrorepasts.com` as the primary domain. With the A records above and the www CNAME configured, both retrorepasts.com and www.retrorepasts.com will serve the site.
+- If you prefer `www.retrorepasts.com` as canonical, change the CNAME file to `www.retrorepasts.com` and update DNS accordingly.
+- The site will show your custom domain in the browser address bar; visitors will not see `Daisymoo.github.io`.
+- If you want the repository to be private note that user/organization GitHub Pages typically require a public repo for automatic site publishing; ask and I can explain alternative approaches.
+
+-- Overwrite existing files if present --
