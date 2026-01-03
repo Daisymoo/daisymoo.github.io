@@ -1,7 +1,43 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Retro Repasts</title>
+  <meta name="description" content="Retro Repasts — vintage recipes & culinary nostalgia." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="canonical" href="https://retrorepasts.com/" />
+</head>
 <body>
-<h1>Hello World!</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <div class="site-wrap">
+      <h1>Retro Repasts</h1>
+      <p class="tagline">Vintage recipes & culinary nostalgia</p>
+    </div>
+  </header>
+
+  <main id="content" class="site-wrap">
+    <article>
+      <h2>Welcome to Retro Repasts</h2>
+      <p>This is a starter post. Replace with your first blog post written in HTML or export Markdown to HTML. If you prefer Markdown-managed posts, ask for a Jekyll scaffold instead.</p>
+      <p class="meta">Posted on <time datetime="2026-01-03">January 3, 2026</time></p>
+    </article>
+
+    <section class="posts-list">
+      <h3>Recent posts</h3>
+      <ul>
+        <li><a href="#">Welcome to Retro Repasts</a> — <span class="muted">January 3, 2026</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-wrap">
+    <p>&copy; <span id="year"></span> Retro Repasts</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
